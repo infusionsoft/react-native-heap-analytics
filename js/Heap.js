@@ -2,7 +2,6 @@
 import {NativeModules, Platform} from 'react-native';
 import Package from 'react-native-package';
 
-
 /**
  * Package.create handles two things:
  *
@@ -19,6 +18,7 @@ export default Package.create({
   nativeModule: NativeModules.RNHeap,
   enabled: Platform.select({
     ios: true,
+    android: true,
   }),
   export: (Heap) => ({
     // App Properties
